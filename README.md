@@ -1,13 +1,46 @@
-# Open_Project_Winter_2025
-This repository outlines the Machine Learning for Quantum State Tomography programme, including the problem statement, assignments, timeline, guidelines, and recommended study paths.
+# Machine Learning for Quantum State Tomography
 
-Refer to the [Project Outline](https://jajapuramshivasai.github.io/Open_Project_Winter_2025/) for the detailed schedule, prerequisites, and resource links.
+This project implements a machine learning based pipeline to reconstruct the quantum state (density matrix) of an unknown single-qubit system from measurement data. The goal is to estimate the quantum state accurately using noisy experimental measurements.
 
-## Submission Guidelines
-- Fork this repository to your GitHub account before beginning any tasks, and keep it synchronized with upstream updates.
-- Complete every task described in the provided Python notebooks, committing work frequently with clear messages.
-- Build a unified follow on project in your own repository that integrates the techniques and lessons from all assignments, documenting design decisions and outcomes.
-- Submit both the assignment artifacts in your fork and the consolidated project repository; certification evaluations will consider completeness, rigor, and documentation quality.
-- Project maintained by Nikhil Raj/22321022
+##  Project Overview
+
+Quantum State Tomography (QST) is the process of estimating the density matrix of a quantum system from measurement outcomes. Traditional methods scale poorly and are sensitive to noise. This project uses machine learning to improve reconstruction quality and robustness.
+
+The pipeline performs:
+
+- Generation of measurement data  
+- Feature extraction from POVM / Pauli measurements  
+- Machine learning based reconstruction  
+- Validation against ground-truth quantum states  
+
+---
+
+##  Key Components
+
+| Folder | Description |
+|------|------------|
+| `data/single_qubit/` | Measurement data and true quantum states |
+| `notebooks/` | Jupyter notebook containing full ML pipeline |
+| `outputs/` | Model predictions and validation metrics |
+| `docs/` | Project documentation |
+| `README.md` | Project overview |
+
+---
+
+## What the Model Does
+
+The model learns a mapping from noisy measurement outcomes to the underlying quantum density matrix. It is trained on simulated quantum measurement data and evaluated using fidelity and reconstruction error.
+
+The system is tested on multiple prepared quantum states to verify generalization.
+
+---
+
+## How to Run
+
+1. Clone the repository  
+```bash
+git clone https://github.com/nikhilraj8371-svg/Machine-Learning-for-Quantum-Tomography.git
+cd Machine-Learning-for-Quantum-Tomography
+
 
 
